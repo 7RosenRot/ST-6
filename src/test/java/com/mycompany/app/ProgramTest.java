@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.awt.GridLayout;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -185,7 +186,7 @@ public class ProgramTest {
     assertTrue(output.contains("X") && output.contains("O"));
     
     outputSpy.reset();
-    ArrayList<Integer> dataList = new ArrayList<>(List.of(1, 3, 5));
+    ArrayList<Integer> dataList = new ArrayList<>(java.util.Arrays.asList(1, 3, 5));
     tool.print(dataList);
     assertNotNull(outputSpy.toString());
   }
